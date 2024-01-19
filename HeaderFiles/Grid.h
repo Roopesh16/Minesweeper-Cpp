@@ -4,6 +4,7 @@
 #define GRID_H
 
 #define N 9
+
 class Grid
 {
 private:
