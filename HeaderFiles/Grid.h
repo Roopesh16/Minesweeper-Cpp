@@ -7,6 +7,10 @@ class Grid
 {
 private:
     Cell grid[N][N];
+    void SetupMines();
+    void SetCellValues();
+    void PrintEmptyGrid(int,int);
+    void PrintNumberedGrid(int,int);
 
 public:
     Grid()
@@ -21,9 +25,6 @@ public:
     }
 
     void GetInput(int, int);
-    void SetupMines();
-    void SetCellValues();
-    void PrintGrid();
 };
 
 #endif
