@@ -19,7 +19,7 @@ class Cell
 private:
     int row;
     int col;
-    int mineCount;
+    char value;
     CellType cellType;
     CellState cellState;
 
@@ -28,14 +28,15 @@ public:
     {
         this->row = row;
         this->col = col;
+        mineCount = 0;
     }
 
-    void SetCellType(CellType cellType);
-    void SetCellState(CellState cellState);
-    void SetMineCount();
+    void SetCellType(CellType);
     CellType GetCellType();
+    void SetCellState(CellState);
     CellState GetCellState();
-    char GetMineCount();
+    void SetCellValue(char);
+    char GetCellValue();
 };
 
 #endif
