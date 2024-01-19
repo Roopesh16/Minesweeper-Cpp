@@ -44,14 +44,14 @@ void Cell : SetCellValue()
 
     if (mineCount == 0)
     {
-        this.cellValue = '0';
         SetCellType(EMPTY);
     }
     else
     {
-        this.cellValue = (char)mineCount;
         SetCellType(NUMBER);
     }
+
+    this.cellValue = (char)cellValuel;
 }
 
 char Cell::GetCellValue()
