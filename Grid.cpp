@@ -14,13 +14,13 @@ void Grid::GetInput(int row, int col)
         isFirst = false;
     }
 
-    if (grid[row][col]->GetCellType() == EMPTY)
+    if (cells[row][col]->GetCellType() == EMPTY)
         OpenEmptyGrid(row, col);
-    else if (grid[row][col]->GetCellType() == NUMBER)
-        grid[row][col]->SetCellState(OPEN);
+    else if (cells[row][col]->GetCellType() == NUMBER)
+        cells[row][col]->SetCellState(OPEN);
     else
     {
-        grid[row][col]->SetCellState(OPEN);
+        cells[row][col]->SetCellState(OPEN);
         // SetGameState(OVER);
     }
 
@@ -36,13 +36,13 @@ void Grid::SetupMines(int row, int col)
         x = (rand() % (N + 1));
         y = (rand() % (N + 1));
 
-        while ((x == row && y == col) || grid[x][y]->GetCellType() == MINE)
+        while ((x == row && y == col) || cells[x][y]->GetCellType() == MINE)
         {
             x = (rand() % (N + 1));
             y = (rand() % (N + 1));
         }
 
-        grid[x][y]->SetCellType(MINE);
+        cells[x][y]->SetCellType(MINE);
         time--;
     }
 }
@@ -53,7 +53,7 @@ void Grid::SetCellValues()
     {
         for (int j = 0; i < N; j++)
         {
-            grid[i][j]->SetCellValue();
+            cells[i][j]->SetCellValue();
         }
     }
 }
@@ -68,9 +68,11 @@ void Grid::PrintGrid()
     {
         for (int j = 0; j < N; j++)
         {
-            cout << grid[i][j]->GetCellValue() << " ";
+            if (cells[i][j]->GetCellState() == OPEN)
+                cout << cells[i][j]->GetCellValue();
+            else
+                cout << " ";
         }
-
         cout << endl;
     }
 }
