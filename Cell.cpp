@@ -1,5 +1,4 @@
 #include "HeaderFiles/Cell.h"
-#include "HeaderFiles/Grid.h"
 using namespace std;
 
 void Cell::SetCellState(CellState cellState)
