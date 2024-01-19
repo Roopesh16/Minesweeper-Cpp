@@ -1,17 +1,29 @@
+#include"HeaderFiles/Cell.h"
 #ifndef GRID_H
 #define GRID_H
 
 #define N 9
-
 class Grid
 {
 private:
-    char grid[N][N] = {'0'};
+    Cell grid[N][N];
+
 public:
-    void GetInput(int row, int col);
+    Grid()
+    {
+        for (int i = 0; i < N;i++)
+        {
+            for (int j = 0; j < N;j++)
+            {
+                grid[i][j].SetCellValue() = '0';
+            }
+        }
+    }
+
+    void GetInput(int, int);
     void SetupMines();
     void SetCellValues();
-    void Print();
+    void PrintGrid();
 };
 
 #endif
