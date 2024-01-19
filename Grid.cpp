@@ -61,5 +61,15 @@ void Grid::OpenEmptyGrid(int row,int col)
     
 }
 
-void Grid::Print
+void Grid::PrintGrid()
+{
+    for (int i = 0; i < N;i++)
+    {
+        for (int j = 0; j < N;j++)
+        {
+            cout << grid[i][j]->GetCellValue() << " ";
+        }
 
+        endl;
+    }
+}

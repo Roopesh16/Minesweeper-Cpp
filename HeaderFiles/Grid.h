@@ -1,8 +1,7 @@
 #include "HeaderFiles/Cell.h"
-#include <iostream>
+
 #ifndef GRID_H
 #define GRID_H
-
 #define N 9
 class Grid
 {
