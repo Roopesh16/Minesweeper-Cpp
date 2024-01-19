@@ -11,6 +11,18 @@ void Grid::GetInput(int row, int col)
         SetupMines(row, col);
         SetCellValues();
     }
+
+    if(grid[row][col] == EMPTY)
+        OpenEmptyGrid();
+    else if(grid[row][col] == NUMBER)
+        grid[row][col].SetCellState(OPEN);
+    else
+    {
+        grid[row][col].SetCellState(OPEN);
+        //SetGameState(OVER);
+    }
+
+    PrintGrid();
 }
 
 void Grid::SetupMines(int row, int col)
@@ -43,3 +55,9 @@ void Grid::SetCellValues()
         }
     }
 }
+
+void Grid::OpenEmptyGrid(int row,int col)
+{
+    
+}
+

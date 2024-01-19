@@ -6,11 +6,11 @@
 class Grid
 {
 private:
-    Cell grid[N][N];
+    Cell *grid[N][N];
     void SetupMines();
     void SetCellValues();
-    void PrintEmptyGrid(int,int);
-    void PrintNumberedGrid(int,int);
+    void OpenEmptyGrid(int,int);
+    void PrintGrid();
 
 public:
     Grid()
@@ -19,7 +19,7 @@ public:
         {
             for (int j = 0; j < N;j++)
             {
-                grid[i][j].SetCellValue() = '0';
+                grid[i][j] = new Cell(i,j);
             }
         }
     }
