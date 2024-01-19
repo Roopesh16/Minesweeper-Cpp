@@ -8,10 +8,10 @@ class Grid
 private:
     char grid[N][N] = {'0'};
 public:
-    void Print();
+    void GetInput(int row, int col);
     void SetupMines();
     void SetCellValues();
-    void GetInput(int row, int col);
+    void Print();
 };
 
 #endif
