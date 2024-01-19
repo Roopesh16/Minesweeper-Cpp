@@ -51,7 +51,7 @@ void Cell : SetCellValue()
         SetCellType(NUMBER);
     }
 
-    this.cellValue = (char)cellValuel;
+    this.cellValue = (char)cellValue;
 }
 
 char Cell::GetCellValue()
