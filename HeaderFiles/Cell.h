@@ -28,7 +28,9 @@ public:
     {
         this->row = row;
         this->col = col;
-        mineCount = 0;
+        value = '0';
+        cellType = EMPTY;
+        cellState = CLOSED;
     }
 
     void SetCellType(CellType);
