@@ -1,4 +1,4 @@
-#include "HeaderFiles/Cell.h"
+#include "Cell.h"
 
 #ifndef GRID_H
 #define GRID_H
