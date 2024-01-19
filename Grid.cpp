@@ -60,6 +60,7 @@ void Grid::SetCellValues()
 
 void Grid::OpenEmptyGrid(int row, int col)
 {
+    cells[row][col]->SetCellState(OPEN);
 }
 
 void Grid::PrintGrid()
