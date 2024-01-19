@@ -11,6 +11,7 @@ void Grid::GetInput(int row, int col)
     {
         SetupMines(row, col);
         SetCellValues();
+        isFirst = false;
     }
 
     if (grid[row][col]->GetCellType() == EMPTY)
