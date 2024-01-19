@@ -19,7 +19,7 @@ class Cell
 private:
     int row;
     int col;
-    char value;
+    char cellValue;
     CellType cellType;
     CellState cellState;
 
@@ -28,7 +28,7 @@ public:
     {
         this->row = row;
         this->col = col;
-        value = '0';
+        cellValue = '0';
         cellType = EMPTY;
         cellState = CLOSED;
     }
@@ -37,7 +37,7 @@ public:
     CellType GetCellType();
     void SetCellState(CellState);
     CellState GetCellState();
-    void SetCellValue(char);
+    void SetCellValue();
     char GetCellValue();
 };
 

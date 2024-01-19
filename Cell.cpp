@@ -1,6 +1,5 @@
 #include "HeaderFiles/Cell.h"
 #include "HeaderFiles/Grid.h"
-#include <iostream>
 using namespace std;
 
 void Cell::SetCellState(CellState cellState)
@@ -23,11 +22,11 @@ CellType Cell::GetCellType()
     return cellType;
 }
 
-void Cell : SetCellValue()
+void Cell :: SetCellValue()
 {
-    if (this.cellType == MINE)
+    if (cellType == MINE)
     {
-        this.cellValue = '*';
+        cellValue = '*';
         return;
     }
 
@@ -37,7 +36,7 @@ void Cell : SetCellValue()
     {
         for (int j = col - 1; j <= col + 1; j++)
         {
-            if (this.cellType == MINE)
+            if (cellType == MINE)
                 mineCount++;
         }
     }
@@ -51,10 +50,10 @@ void Cell : SetCellValue()
         SetCellType(NUMBER);
     }
 
-    this.cellValue = (char)cellValue;
+    this->cellValue = (char)mineCount;
 }
 
 char Cell::GetCellValue()
 {
-    return cellValue;
+    return Cell::cellValue;
 }
