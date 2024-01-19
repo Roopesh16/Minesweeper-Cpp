@@ -12,13 +12,13 @@ void Grid::GetInput(int row, int col)
         SetCellValues();
     }
 
-    if(grid[row][col] == EMPTY)
-        OpenEmptyGrid();
-    else if(grid[row][col] == NUMBER)
-        grid[row][col].SetCellState(OPEN);
+    if(grid[row][col]->GetCellType() == EMPTY)
+        OpenEmptyGrid(row,col);
+    else if(grid[row][col]->GetCellType() == NUMBER)
+        grid[row][col]->SetCellState(OPEN);
     else
     {
-        grid[row][col].SetCellState(OPEN);
+        grid[row][col]->SetCellState(OPEN);
         //SetGameState(OVER);
     }
 
@@ -60,4 +60,6 @@ void Grid::OpenEmptyGrid(int row,int col)
 {
     
 }
+
+void Grid::Print
 

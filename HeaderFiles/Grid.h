@@ -1,4 +1,5 @@
-#include"HeaderFiles/Cell.h"
+#include "HeaderFiles/Cell.h"
+#include <iostream>
 #ifndef GRID_H
 #define GRID_H
 
@@ -7,7 +8,7 @@ class Grid
 {
 private:
     Cell *grid[N][N];
-    void SetupMines();
+    void SetupMines(int,int);
     void SetCellValues();
     void OpenEmptyGrid(int,int);
     void PrintGrid();
