@@ -8,14 +8,14 @@ enum GameState
     OVER
 };
 
-static class State
+class State
 {
 private:
     static GameState state;
 
 public:
-    void SetState(GameState newState);
-
-    GameState GetState();
+    static void SetState(GameState);
+    static GameState GetState();
 };
+
 #endif
