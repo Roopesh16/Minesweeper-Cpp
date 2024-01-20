@@ -1,5 +1,4 @@
 #include "HeaderFiles/State.h"
-using namespace std;
 
 void State::SetState(GameState newState)
 {
