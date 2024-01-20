@@ -24,6 +24,7 @@ void BasicInfo()
 int main()
 {
     BasicInfo();
+    State::SetState(PLAY);
 
     Grid *grid = new Grid();
 
