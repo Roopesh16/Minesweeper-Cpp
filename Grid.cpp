@@ -1,5 +1,6 @@
 #include "HeaderFiles/Grid.h"
 #include "HeaderFiles/Cell.h"
+#include "HeaderFiles/State.h"
 #include <iostream>
 using namespace std;
 
@@ -21,7 +22,7 @@ void Grid::GetInput(int row, int col)
     else
     {
         cells[row][col]->SetCellState(OPEN);
-        // SetGameState(OVER);
+        SetState(OVER);
     }
 
     PrintGrid();

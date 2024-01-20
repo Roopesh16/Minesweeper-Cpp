@@ -1,5 +1,6 @@
 #include "HeaderFiles/Grid.h"
 #include "HeaderFiles/Cell.h"
+#include "HeaderFiles/State.h"
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -8,24 +9,7 @@ std::ostream &bold_on(std::ostream &os) { return os << "\e[1m"; }
 
 std::ostream &bold_off(std::ostream &os) { return os << "\e[0m"; }
 
-enum State
-{
-    PLAY,
-    WIN,
-    OVER
-};
 
-State state;
-
-State GetState()
-{
-    return state;
-}
-
-void SetState(State newState)
-{
-    state = newState;
-}
 
 void BasicInfo()
 {
