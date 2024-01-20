@@ -9,8 +9,6 @@ std::ostream &bold_on(std::ostream &os) { return os << "\e[1m"; }
 
 std::ostream &bold_off(std::ostream &os) { return os << "\e[0m"; }
 
-
-
 void BasicInfo()
 {
     cout << bold_on << setw(45) << "MINESWEEPER\n\n"
@@ -27,11 +25,11 @@ int main()
 {
     BasicInfo();
 
-    SetState(PLAY);
+    State state;
 
     Grid *grid = new Grid();
 
-    while (GetState() != OVER || GetState() != WIN)
+    while (state.GetState() != OVER || state.GetState() != WIN)
     {
         int row, col;
         cout << "Enter Row : ";
@@ -42,7 +40,7 @@ int main()
         grid->GetInput(row, col);
     }
 
-    if(GetState() == WIN)
+    if (state.GetState() == WIN)
     {
         cout << bold_on << "GAME WON!!!" << bold_off;
     }
