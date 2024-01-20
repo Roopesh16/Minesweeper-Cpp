@@ -11,6 +11,7 @@ private:
     Cell *cells[N][N];
     void SetupMines(int, int);
     void SetCellValues();
+    void CheckWinState();
     void OpenEmptyGrid(int, int);
     void PrintGrid();
 
