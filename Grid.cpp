@@ -5,7 +5,6 @@
 using namespace std;
 
 bool isFirst = true;
-State state;
 
 void Grid::GetInput(int row, int col)
 {
@@ -23,7 +22,7 @@ void Grid::GetInput(int row, int col)
     else
     {
         cells[row][col]->SetCellState(OPEN);
-        state.SetState(OVER);
+        State::SetState(OVER);
     }
 
     PrintGrid();
@@ -76,7 +75,7 @@ void Grid::CheckWinState()
     }
 
     if(IsWin)
-        state.SetState(WIN);
+        State::SetState(WIN);
 }
 
 void Grid::OpenEmptyGrid(int row, int col)

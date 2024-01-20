@@ -25,11 +25,9 @@ int main()
 {
     BasicInfo();
 
-    State state;
-
     Grid *grid = new Grid();
 
-    while (state.GetState() != OVER || state.GetState() != WIN)
+    while (State::GetState() != OVER || State::GetState() != WIN)
     {
         int row, col;
         cout << "Enter Row : ";
@@ -40,7 +38,7 @@ int main()
         grid->GetInput(row, col);
     }
 
-    if (state.GetState() == WIN)
+    if (State::GetState() == WIN)
     {
         cout << bold_on << "GAME WON!!!" << bold_off;
     }
