@@ -1,5 +1,4 @@
 #include "HeaderFiles/Cell.h"
-using namespace std;
 
 void Cell::SetCellState(CellState cellState)
 {
