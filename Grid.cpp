@@ -59,6 +59,25 @@ void Grid::SetCellValues()
     }
 }
 
+void Grid::CheckWinState()
+{
+    bool IsWin = true;
+
+    for (int i = 0; i < N;i++)
+    {
+        for (int j = 0; j < N;j++)
+        {
+            if(cells[i][j]->GetCellType() == NUMBER && cells[i][j]->GetCellState()==CLOSED)
+            {
+                IsWin = false;
+            }
+        }
+    }
+
+    if(IsWin)
+        SetState(WIN);
+}
+
 void Grid::OpenEmptyGrid(int row, int col)
 {
     cells[row][col]->SetCellState(OPEN);
