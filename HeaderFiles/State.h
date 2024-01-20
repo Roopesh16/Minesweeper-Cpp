@@ -1,23 +1,21 @@
 #ifndef STATE_H
 #define STATE_H
 
-enum State
+enum GameState
 {
     PLAY,
     WIN,
     OVER
 };
 
-State state;
-
-State GetState()
+static class State
 {
-    return state;
-}
+private:
+    static GameState state;
 
-void SetState(State newState)
-{
-    state = newState;
-}
+public:
+    void SetState(GameState newState);
 
+    GameState GetState();
+};
 #endif
