@@ -3,6 +3,7 @@
 
 enum GameState
 {
+    NONE,
     PLAY,
     WIN,
     OVER
@@ -11,9 +12,8 @@ enum GameState
 class State
 {
 private:
-    static GameState state;
-
 public:
+    static GameState state;
     static void SetState(GameState);
     static GameState GetState();
 };
