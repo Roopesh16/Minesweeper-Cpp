@@ -48,10 +48,10 @@ void Cell :: SetCellValue()
         SetCellType(NUMBER);
     }
 
-    this->cellValue = (char)mineCount;
+    cellValue = char(mineCount);
 }
 
 char Cell::GetCellValue()
 {
-    return Cell::cellValue;
+    return cellValue;
 }
