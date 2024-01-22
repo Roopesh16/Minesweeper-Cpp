@@ -34,13 +34,13 @@ void Grid::SetupMines(int row, int col)
     int x, y;
     while (time > 0)
     {
-        x = (rand() % (N + 1));
-        y = (rand() % (N + 1));
+        x = (rand() % N);
+        y = (rand() % N);
 
         while ((x == row && y == col) || cells[x][y]->GetCellType() == MINE)
         {
-            x = (rand() % (N + 1));
-            y = (rand() % (N + 1));
+            x = (rand() % N );
+            y = (rand() % N );
         }
 
         cells[x][y]->SetCellType(MINE);
@@ -52,7 +52,7 @@ void Grid::SetCellValues()
 {
     for (int i = 0; i < N; i++)
     {
-        for (int j = 0; i < N; j++)
+        for (int j = 0; j < N; j++)
         {
             cells[i][j]->SetCellValue();
         }
@@ -81,6 +81,7 @@ void Grid::CheckWinState()
 void Grid::OpenEmptyGrid(int row, int col)
 {
     cells[row][col]->SetCellState(OPEN);
+    cout << cells[row][col]->GetCellValue();
 }
 
 void Grid::PrintGrid()
@@ -92,7 +93,7 @@ void Grid::PrintGrid()
             if (cells[i][j]->GetCellState() == OPEN)
                 cout << cells[i][j]->GetCellValue();
             else
-                cout << " ";
+                cout << "-";
         }
         cout << endl;
     }
