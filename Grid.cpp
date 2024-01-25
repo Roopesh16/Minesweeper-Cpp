@@ -2,9 +2,11 @@
 #include "HeaderFiles/Cell.h"
 #include "HeaderFiles/State.h"
 #include <iostream>
+#include <queue>
 using namespace std;
 
 bool isFirst = true;
+bool visited[N][N] = {false};
 
 void Grid::GetInput(int row, int col)
 {
@@ -16,7 +18,7 @@ void Grid::GetInput(int row, int col)
     }
 
     if (cells[row][col]->GetCellType() == EMPTY)
-        OpenEmptyGrid(row, col);
+        OpenEmptyGrid(row, col, visited);
     else if (cells[row][col]->GetCellType() == NUMBER)
         cells[row][col]->SetCellState(OPEN);
     else
@@ -39,8 +41,8 @@ void Grid::SetupMines(int row, int col)
 
         while ((x == row && y == col) || cells[x][y]->GetCellType() == MINE)
         {
-            x = (rand() % N );
-            y = (rand() % N );
+            x = (rand() % N);
+            y = (rand() % N);
         }
 
         cells[x][y]->SetCellType(MINE);
@@ -63,25 +65,53 @@ void Grid::CheckWinState()
 {
     bool IsWin = true;
 
-    for (int i = 0; i < N;i++)
+    for (int i = 0; i < N; i++)
     {
-        for (int j = 0; j < N;j++)
+        for (int j = 0; j < N; j++)
         {
-            if(cells[i][j]->GetCellType() == NUMBER && cells[i][j]->GetCellState()==CLOSED)
+            if (cells[i][j]->GetCellType() == NUMBER && cells[i][j]->GetCellState() == CLOSED)
             {
                 IsWin = false;
             }
         }
     }
 
-    if(IsWin)
+    if (IsWin)
         State::SetState(WIN);
 }
 
-void Grid::OpenEmptyGrid(int row, int col)
+void Grid::OpenEmptyGrid(int row, int col, bool visited[N][N])
 {
+    if (row == N || col == N || row < 0 || col < 0)
+    {
+        return;
+    }
+
+    if (cells[row][col]->GetCellType() == NUMBER)
+    {
+        cells[row][col]->SetCellState(OPEN);
+        return;
+    }
+
+    if (cells[row][col]->GetCellType() == MINE)
+    {
+        return;
+    }
+
+    visited[row][col] = true;
     cells[row][col]->SetCellState(OPEN);
-    cout << cells[row][col]->GetCellValue();
+
+    for (int i = row - 1; i <= row + 1; i++)
+    {
+        for (int j = col - 1; j < col + 1; j++)
+        {
+            if (visited[i][j] == false)
+            {
+                visited[i][j] = true;
+                OpenEmptyGrid(i, j, visited);
+            }
+        }
+    }
 }
 
 void Grid::PrintGrid()
@@ -97,4 +127,9 @@ void Grid::PrintGrid()
         }
         cout << endl;
     }
+}
+
+Cell **Grid::GetGrid()
+{
+    return *cells;
 }
