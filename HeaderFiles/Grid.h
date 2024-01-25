@@ -12,7 +12,7 @@ private:
     void SetupMines(int, int);
     void SetCellValues();
     void CheckWinState();
-    void OpenEmptyGrid(int, int);
+    void OpenEmptyGrid(int, int,bool [N][N]);
     void PrintGrid();
 
 public:
@@ -28,6 +28,7 @@ public:
     }
 
     void GetInput(int, int);
+    Cell **GetGrid();
 };
 
 #endif
