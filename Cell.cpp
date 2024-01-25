@@ -1,4 +1,9 @@
 #include "HeaderFiles/Cell.h"
+#include "HeaderFiles/Grid.h"
+#include <iostream>
+using namespace std;
+
+Grid grid;
 
 void Cell::SetCellState(CellState cellState)
 {
@@ -20,8 +25,9 @@ CellType Cell::GetCellType()
     return cellType;
 }
 
-void Cell :: SetCellValue()
+void Cell ::SetCellValue()
 {
+    cout << "set";
     if (cellType == MINE)
     {
         cellValue = '*';
@@ -34,8 +40,13 @@ void Cell :: SetCellValue()
     {
         for (int j = col - 1; j <= col + 1; j++)
         {
-            if (cellType == MINE)
+            if (grid.GetGrid()[i][j].cellType == MINE)
+            {
+                cout << 2;
                 mineCount++;
+            }
+
+            cout << 3;
         }
     }
 
@@ -49,6 +60,7 @@ void Cell :: SetCellValue()
     }
 
     cellValue = char(mineCount);
+    cout << mineCount << "\n";
 }
 
 char Cell::GetCellValue()
