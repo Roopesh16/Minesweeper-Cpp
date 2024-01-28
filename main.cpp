@@ -1,3 +1,13 @@
+/**
+ * @file main.cpp
+ * @author Roopesh
+ * @brief Main file where info is displayed and user input is taken
+ * @version 0.1
+ * @date 2024-01-28
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include "HeaderFiles/Grid.h"
 #include "HeaderFiles/Cell.h"
 #include "HeaderFiles/State.h"
@@ -9,6 +19,10 @@ std::ostream &bold_on(std::ostream &os) { return os << "\e[1m"; }
 
 std::ostream &bold_off(std::ostream &os) { return os << "\e[0m"; }
 
+/**
+ * @brief This prints the game rules
+ * 
+ */
 void BasicInfo()
 {
     cout << bold_on << setw(45) << "MINESWEEPER\n\n"
@@ -21,6 +35,11 @@ void BasicInfo()
     cout << "\n";
 }
 
+/**
+ * @brief Main function where user input is taken
+ * 
+ * @return int 
+ */
 int main()
 {
     BasicInfo();

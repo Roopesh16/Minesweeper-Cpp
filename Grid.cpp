@@ -1,3 +1,13 @@
+/**
+ * @file Grid.cpp
+ * @author Roopesh
+ * @brief Defines function of Grid class
+ * @version 0.1
+ * @date 2024-01-28
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include "HeaderFiles/Grid.h"
 #include "HeaderFiles/Cell.h"
 #include "HeaderFiles/State.h"
@@ -5,9 +15,17 @@
 #include <queue>
 using namespace std;
 
+/// @brief Check if is first input or not
 bool isFirst = true;
+/// @brief Visited grid to check whether current cell has been visited or not
 bool visited[N][N] = {false};
 
+/**
+ * @brief Takes input from user and sets grid and open the grid
+ * 
+ * @param row Input row
+ * @param col Input column
+ */
 void Grid::GetInput(int row, int col)
 {
     if (isFirst)
@@ -29,6 +47,12 @@ void Grid::GetInput(int row, int col)
     PrintGrid();
 }
 
+/**
+ * @brief This takes random 10 places and setup mines
+ * 
+ * @param row Input row to be omitted
+ * @param col Input column to be omitted
+ */
 void Grid::SetupMines(int row, int col)
 {
     int time = 10;
@@ -49,16 +73,27 @@ void Grid::SetupMines(int row, int col)
     }
 }
 
+/**
+ * @brief Sets cell value for each cell in the grid
+ * 
+ */
 void Grid::SetCellValues()
 {
     for (int i = 0; i < N; i++)
     {
         for (int j = 0; j < N; j++)
         {
+            SetCellValue(i, j);
         }
     }
 }
 
+/**
+ * @brief Checks each cell and set a cell type and value for it
+ * 
+ * @param row Cell row
+ * @param col Cell column
+ */
 void Grid::SetCellValue(int row, int col)
 {
     if (cells[row][col]->GetCellType() == MINE)
@@ -91,6 +126,10 @@ void Grid::SetCellValue(int row, int col)
     }
 }
 
+/**
+ * @brief Check whether player has won the game or not
+ * 
+ */
 void Grid::CheckWinState()
 {
     bool IsWin = true;
@@ -110,6 +149,13 @@ void Grid::CheckWinState()
         State::SetState(WIN);
 }
 
+/**
+ * @brief This function opens all empty grid till it find a numbered grid
+ * 
+ * @param row Input row
+ * @param col Input column
+ * @param visited Visited array
+ */
 void Grid::OpenEmptyGrid(int row, int col, bool visited[N][N])
 {
     if (row == N || col == N || row < 0 || col < 0)
@@ -144,6 +190,10 @@ void Grid::OpenEmptyGrid(int row, int col, bool visited[N][N])
     }
 }
 
+/**
+ * @brief Prints the open cells in the grid
+ * 
+ */
 void Grid::PrintGrid()
 {
     for (int i = 0; i < N; i++)
