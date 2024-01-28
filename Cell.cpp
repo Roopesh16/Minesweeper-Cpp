@@ -3,8 +3,6 @@
 #include <iostream>
 using namespace std;
 
-Grid grid;
-
 void Cell::SetCellState(CellState cellState)
 {
     this->cellState = cellState;
@@ -25,42 +23,9 @@ CellType Cell::GetCellType()
     return cellType;
 }
 
-void Cell ::SetCellValue()
+void Cell::SetCellValue(char cellValue)
 {
-    cout << "set";
-    if (cellType == MINE)
-    {
-        cellValue = '*';
-        return;
-    }
-
-    int mineCount = 0;
-
-    for (int i = row - 1; i <= row + 1; i++)
-    {
-        for (int j = col - 1; j <= col + 1; j++)
-        {
-            if (grid.GetGrid()[i][j].cellType == MINE)
-            {
-                cout << 2;
-                mineCount++;
-            }
-
-            cout << 3;
-        }
-    }
-
-    if (mineCount == 0)
-    {
-        SetCellType(EMPTY);
-    }
-    else
-    {
-        SetCellType(NUMBER);
-    }
-
-    cellValue = char(mineCount);
-    cout << mineCount << "\n";
+    this->cellValue = cellValue;
 }
 
 char Cell::GetCellValue()
