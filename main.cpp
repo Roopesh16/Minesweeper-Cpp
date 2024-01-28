@@ -31,7 +31,7 @@ int main()
     while (State::GetState() != OVER || State::GetState() != WIN)
     {
         int row, col;
-        cout << "Enter Row : ";
+        cout << "\nEnter Row : ";
         cin >> row;
         cout << "Enter Column : ";
         cin >> col;
