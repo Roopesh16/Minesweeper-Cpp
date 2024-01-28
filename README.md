@@ -5,9 +5,9 @@ To make this game -
 
  1. Project consist of Header Files and Program Files.
   2. The files are of - 
-	 a. **Grid** - This consist data of Grid and check for win/lose and opening grid cells
-	 b. **Cells** - This consist data of each cell and to store cell state/type and row/column value
-	 c. **State** - This consist of game state and to set/get current game state.
+	 - **Grid** - This consist data of Grid and check for win/lose and opening grid cells
+	 - **Cells** - This consist data of each cell and to store cell state/type and row/column value
+	 - **State** - This consist of game state and to set/get current game state.
 
 3. Docs folder consist of doxygen file where you can read the class and function definition.
 ## Rules
