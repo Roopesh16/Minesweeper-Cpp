@@ -9,7 +9,7 @@
                 "-g",
                 "*.cpp",
                 "-o",
-                "MineSweeper.exe"
+                "Minesweeper.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
