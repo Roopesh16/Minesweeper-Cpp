@@ -124,7 +124,7 @@ void Grid::SetCellValue(int row, int col)
     else
     {
         cells[row][col]->SetCellType(NUMBER);
-        cells[row][col]->SetCellValue(char(mineCount+NUM_DEC));
+        cells[row][col]->SetCellValue(char(mineCount + NUM_DEC));
     }
 }
 
@@ -160,11 +160,6 @@ void Grid::CheckWinState()
  */
 void Grid::OpenEmptyGrid(int row, int col, bool visited[N][N])
 {
-    if (row == N || col == N || row < 0 || col < 0)
-    {
-        return;
-    }
-
     if (cells[row][col]->GetCellType() == NUMBER)
     {
         cells[row][col]->SetCellState(OPEN);
@@ -181,12 +176,15 @@ void Grid::OpenEmptyGrid(int row, int col, bool visited[N][N])
 
     for (int i = row - 1; i <= row + 1; i++)
     {
-        for (int j = col - 1; j < col + 1; j++)
+        for (int j = col - 1; j <= col + 1; j++)
         {
-            if ((i != row && j != col) && visited[i][j] == false)
+            if (row >= 0 && row < N && col >= 0 && col < N)
             {
-                visited[i][j] = true;
-                OpenEmptyGrid(i, j, visited);
+                if (visited[i][j] == false)
+                {
+                    visited[i][j] = true;
+                    OpenEmptyGrid(i, j, visited);
+                }
             }
         }
     }
