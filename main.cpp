@@ -4,9 +4,9 @@
  * @brief Main file where info is displayed and user input is taken
  * @version 0.1
  * @date 2024-01-28
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 #include "HeaderFiles/Grid.h"
 #include "HeaderFiles/Cell.h"
@@ -21,7 +21,7 @@ std::ostream &bold_off(std::ostream &os) { return os << "\e[0m"; }
 
 /**
  * @brief This prints the game rules
- * 
+ *
  */
 void BasicInfo()
 {
@@ -37,8 +37,8 @@ void BasicInfo()
 
 /**
  * @brief Main function where user input is taken
- * 
- * @return int 
+ *
+ * @return int
  */
 int main()
 {
@@ -47,7 +47,7 @@ int main()
 
     Grid *grid = new Grid();
 
-    while (State::GetState() != OVER || State::GetState() != WIN)
+    while (State::GetState() == PLAY)
     {
         int row, col;
         cout << "\nEnter Row : ";
@@ -60,10 +60,13 @@ int main()
 
     if (State::GetState() == WIN)
     {
-        cout << bold_on << "GAME WON!!!" << bold_off;
+        cout << bold_on << "GAME WON!!!\n" << bold_off;
     }
     else
     {
-        cout << bold_on << "GAME OVER!!!" << bold_off;
+        cout << bold_on << "GAME OVER!!!\n" << bold_off;
     }
+
+    int n;
+    cin>>n;
 }
