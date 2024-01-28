@@ -3,9 +3,9 @@
 
 enum CellType
 {
+    EMPTY,
     NUMBER,
     MINE,
-    EMPTY
 };
 
 enum CellState
@@ -37,7 +37,7 @@ public:
     CellType GetCellType();
     void SetCellState(CellState);
     CellState GetCellState();
-    void SetCellValue();
+    void SetCellValue(char);
     char GetCellValue();
 };
 
