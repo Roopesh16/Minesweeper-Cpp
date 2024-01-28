@@ -28,7 +28,7 @@ void BasicInfo()
     cout << bold_on << setw(45) << "MINESWEEPER\n\n"
          << bold_off;
     cout << "Minesweeper is a classic game which everyone has played but no one knows the rule of! So here are the rules - \n";
-    cout << "1. You can input between 0-9 as row and column.\n";
+    cout << "1. You can input between 0-8 as row and column.\n";
     cout << "2. When the grid opens, you will see numbers on the cell. This number represents the number of mine adjacent to current cell\n";
     cout << "3. If you open a mine, then GAME OVER.\n";
     cout << "4. If you avoid all the mines, then you win\n";
