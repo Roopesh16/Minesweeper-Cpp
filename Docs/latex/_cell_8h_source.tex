@@ -1,0 +1,51 @@
+\doxysection{Cell.\+h}
+\hypertarget{_cell_8h_source}{}\label{_cell_8h_source}\index{D:/Documents/Programs/Outscal/Minesweeper-\/Cpp/HeaderFiles/Cell.h@{D:/Documents/Programs/Outscal/Minesweeper-\/Cpp/HeaderFiles/Cell.h}}
+\mbox{\hyperlink{_cell_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ CELL\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ CELL\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_cell_8h_a268ae74e98bc01a0e35f5e215580bcb4}{CellType}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ EMPTY,}
+\DoxyCodeLine{00021\ \ \ \ \ NUMBER,}
+\DoxyCodeLine{00022\ \ \ \ \ MINE,}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_cell_8h_ad5292c4e76abc657b113de5594268aa9}{CellState}}}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ OPEN,}
+\DoxyCodeLine{00032\ \ \ \ \ CLOSED}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_cell}{Cell}}}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ row;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ col;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{char}\ cellValue;}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{_cell_8h_a268ae74e98bc01a0e35f5e215580bcb4}{CellType}}\ cellType;}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{_cell_8h_ad5292c4e76abc657b113de5594268aa9}{CellState}}\ cellState;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_cell}{Cell}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col)}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ this-\/>row\ =\ row;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ this-\/>col\ =\ col;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ cellValue\ =\ \textcolor{charliteral}{'0'};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ cellType\ =\ EMPTY;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ cellState\ =\ CLOSED;}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cell_a1038d2a119dbed6dcad89e0e5fd130a4}{SetCellType}}(\mbox{\hyperlink{_cell_8h_a268ae74e98bc01a0e35f5e215580bcb4}{CellType}});}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{_cell_8h_a268ae74e98bc01a0e35f5e215580bcb4}{CellType}}\ \mbox{\hyperlink{class_cell_a71b5eca8fc24339e9dc5bd1a9bff9797}{GetCellType}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cell_a33d14678842f485619909dca4ddde5a9}{SetCellState}}(\mbox{\hyperlink{_cell_8h_ad5292c4e76abc657b113de5594268aa9}{CellState}});}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{_cell_8h_ad5292c4e76abc657b113de5594268aa9}{CellState}}\ \mbox{\hyperlink{class_cell_a6129537dd47b847449c066b89a4f8621}{GetCellState}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cell_aa9638bc742b208f501a2ab4b6f936e65}{SetCellValue}}(\textcolor{keywordtype}{char});}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_cell_a6d03951aa6d2e8215b0f57028bc37dde}{GetCellValue}}();}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

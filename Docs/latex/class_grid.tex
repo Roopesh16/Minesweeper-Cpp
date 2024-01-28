@@ -1,0 +1,126 @@
+\doxysection{Grid Class Reference}
+\hypertarget{class_grid}{}\label{class_grid}\index{Grid@{Grid}}
+
+
+\doxylink{class_grid}{Grid} class to setup grid and check each cell value.  
+
+
+
+
+{\ttfamily \#include $<$Grid.\+h$>$}
+
+
+
+Collaboration diagram for Grid\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_grid_a3f3c0197bda6d851a0477b9859251415}{Get\+Input}} (int, int)
+\begin{DoxyCompactList}\small\item\em Takes input from user and sets grid and open the grid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_grid_a7140dc0735105aa28b8420ea1ef384db}{Setup\+Mines}} (int, int)
+\begin{DoxyCompactList}\small\item\em This takes random 10 places and setup mines. \end{DoxyCompactList}\item 
+\Hypertarget{class_grid_ac681982fa05e9d185ccce75fd7ad5280}\label{class_grid_ac681982fa05e9d185ccce75fd7ad5280} 
+void {\bfseries Set\+Cell\+Values} ()
+\begin{DoxyCompactList}\small\item\em Sets cell value for each cell in the grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_grid_adeb2215fb80e341f5e7abe86d4e22853}{Set\+Cell\+Value}} (int, int)
+\begin{DoxyCompactList}\small\item\em Checks each cell and set a cell type and value for it. \end{DoxyCompactList}\item 
+\Hypertarget{class_grid_ad541953ba788b137eb30f030e92fb282}\label{class_grid_ad541953ba788b137eb30f030e92fb282} 
+void {\bfseries Check\+Win\+State} ()
+\begin{DoxyCompactList}\small\item\em Check whether player has won the game or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_grid_afdeb28df76e661ae30fc10841d777162}{Open\+Empty\+Grid}} (int, int, bool\mbox{[}N\mbox{]}\mbox{[}N\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function opens all empty grid till it find a numbered grid. \end{DoxyCompactList}\item 
+\Hypertarget{class_grid_a2898652f8d43465a26027454d24ba1bf}\label{class_grid_a2898652f8d43465a26027454d24ba1bf} 
+void {\bfseries Print\+Grid} ()
+\begin{DoxyCompactList}\small\item\em Prints the open cells in the grid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_grid_ae48599cd453fb013dc13f6ce25f14140}\label{class_grid_ae48599cd453fb013dc13f6ce25f14140} 
+\mbox{\hyperlink{class_cell}{Cell}} \texorpdfstring{$\ast$}{*} {\bfseries cells} \mbox{[}N\mbox{]}\mbox{[}N\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_grid}{Grid} class to setup grid and check each cell value. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_grid_a3f3c0197bda6d851a0477b9859251415}\label{class_grid_a3f3c0197bda6d851a0477b9859251415} 
+\index{Grid@{Grid}!GetInput@{GetInput}}
+\index{GetInput@{GetInput}!Grid@{Grid}}
+\doxysubsubsection{\texorpdfstring{GetInput()}{GetInput()}}
+{\footnotesize\ttfamily void Grid\+::\+Get\+Input (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+
+
+Takes input from user and sets grid and open the grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & Input row \\
+\hline
+{\em col} & Input column \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_grid_afdeb28df76e661ae30fc10841d777162}\label{class_grid_afdeb28df76e661ae30fc10841d777162} 
+\index{Grid@{Grid}!OpenEmptyGrid@{OpenEmptyGrid}}
+\index{OpenEmptyGrid@{OpenEmptyGrid}!Grid@{Grid}}
+\doxysubsubsection{\texorpdfstring{OpenEmptyGrid()}{OpenEmptyGrid()}}
+{\footnotesize\ttfamily void Grid\+::\+Open\+Empty\+Grid (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{bool}]{visited\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function opens all empty grid till it find a numbered grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & Input row \\
+\hline
+{\em col} & Input column \\
+\hline
+{\em visited} & Visited array \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_grid_adeb2215fb80e341f5e7abe86d4e22853}\label{class_grid_adeb2215fb80e341f5e7abe86d4e22853} 
+\index{Grid@{Grid}!SetCellValue@{SetCellValue}}
+\index{SetCellValue@{SetCellValue}!Grid@{Grid}}
+\doxysubsubsection{\texorpdfstring{SetCellValue()}{SetCellValue()}}
+{\footnotesize\ttfamily void Grid\+::\+Set\+Cell\+Value (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks each cell and set a cell type and value for it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & \doxylink{class_cell}{Cell} row \\
+\hline
+{\em col} & \doxylink{class_cell}{Cell} column \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_grid_a7140dc0735105aa28b8420ea1ef384db}\label{class_grid_a7140dc0735105aa28b8420ea1ef384db} 
+\index{Grid@{Grid}!SetupMines@{SetupMines}}
+\index{SetupMines@{SetupMines}!Grid@{Grid}}
+\doxysubsubsection{\texorpdfstring{SetupMines()}{SetupMines()}}
+{\footnotesize\ttfamily void Grid\+::\+Setup\+Mines (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This takes random 10 places and setup mines. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & Input row to be omitted \\
+\hline
+{\em col} & Input column to be omitted \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Documents/\+Programs/\+Outscal/\+Minesweeper-\/\+Cpp/\+Header\+Files/\mbox{\hyperlink{_grid_8h}{Grid.\+h}}\item 
+D\+:/\+Documents/\+Programs/\+Outscal/\+Minesweeper-\/\+Cpp/\mbox{\hyperlink{_grid_8cpp}{Grid.\+cpp}}\end{DoxyCompactItemize}

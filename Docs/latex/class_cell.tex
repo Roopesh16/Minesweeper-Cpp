@@ -1,0 +1,143 @@
+\doxysection{Cell Class Reference}
+\hypertarget{class_cell}{}\label{class_cell}\index{Cell@{Cell}}
+
+
+\doxylink{class_cell}{Cell} Class which stores row, column, \doxylink{class_cell}{Cell} Type and \doxylink{class_cell}{Cell} \doxylink{class_state}{State} data for each cell.  
+
+
+
+
+{\ttfamily \#include $<$Cell.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cell_ab0cc6ebedb16ca07d5058835684474e2}\label{class_cell_ab0cc6ebedb16ca07d5058835684474e2} 
+{\bfseries Cell} (int row, int col)
+\item 
+void \mbox{\hyperlink{class_cell_a1038d2a119dbed6dcad89e0e5fd130a4}{Set\+Cell\+Type}} (\mbox{\hyperlink{_cell_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}})
+\begin{DoxyCompactList}\small\item\em This sets a new cell type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_cell_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}} \mbox{\hyperlink{class_cell_a71b5eca8fc24339e9dc5bd1a9bff9797}{Get\+Cell\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Returns curren cell type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cell_a33d14678842f485619909dca4ddde5a9}{Set\+Cell\+State}} (\mbox{\hyperlink{_cell_8h_ad5292c4e76abc657b113de5594268aa9}{Cell\+State}})
+\begin{DoxyCompactList}\small\item\em This sets a new cell state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_cell_8h_ad5292c4e76abc657b113de5594268aa9}{Cell\+State}} \mbox{\hyperlink{class_cell_a6129537dd47b847449c066b89a4f8621}{Get\+Cell\+State}} ()
+\begin{DoxyCompactList}\small\item\em This returns current cell state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cell_aa9638bc742b208f501a2ab4b6f936e65}{Set\+Cell\+Value}} (char)
+\begin{DoxyCompactList}\small\item\em This sets cell value for the cell calculated from grid. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_cell_a6d03951aa6d2e8215b0f57028bc37dde}{Get\+Cell\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Returns current cell value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cell_a85d2a7af6195f5196574790fbc1becfd}\label{class_cell_a85d2a7af6195f5196574790fbc1becfd} 
+int {\bfseries row}
+\item 
+\Hypertarget{class_cell_a09e2f07cb87b7ae5898be20927cf28d1}\label{class_cell_a09e2f07cb87b7ae5898be20927cf28d1} 
+int {\bfseries col}
+\item 
+\Hypertarget{class_cell_a21f9131c4645a3f5dc30fe58c8b16547}\label{class_cell_a21f9131c4645a3f5dc30fe58c8b16547} 
+char {\bfseries cell\+Value}
+\item 
+\Hypertarget{class_cell_acb592927d304e443f26326184b34c5fd}\label{class_cell_acb592927d304e443f26326184b34c5fd} 
+\mbox{\hyperlink{_cell_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}} {\bfseries cell\+Type}
+\item 
+\Hypertarget{class_cell_ae4d63444bd2d0bf9849d2afd4a603a86}\label{class_cell_ae4d63444bd2d0bf9849d2afd4a603a86} 
+\mbox{\hyperlink{_cell_8h_ad5292c4e76abc657b113de5594268aa9}{Cell\+State}} {\bfseries cell\+State}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_cell}{Cell} Class which stores row, column, \doxylink{class_cell}{Cell} Type and \doxylink{class_cell}{Cell} \doxylink{class_state}{State} data for each cell. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cell_a6129537dd47b847449c066b89a4f8621}\label{class_cell_a6129537dd47b847449c066b89a4f8621} 
+\index{Cell@{Cell}!GetCellState@{GetCellState}}
+\index{GetCellState@{GetCellState}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{GetCellState()}{GetCellState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_cell_8h_ad5292c4e76abc657b113de5594268aa9}{Cell\+State}} Cell\+::\+Get\+Cell\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This returns current cell state. 
+
+\begin{DoxyReturn}{Returns}
+Cell\+State Return current cell state 
+\end{DoxyReturn}
+\Hypertarget{class_cell_a71b5eca8fc24339e9dc5bd1a9bff9797}\label{class_cell_a71b5eca8fc24339e9dc5bd1a9bff9797} 
+\index{Cell@{Cell}!GetCellType@{GetCellType}}
+\index{GetCellType@{GetCellType}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{GetCellType()}{GetCellType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_cell_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}} Cell\+::\+Get\+Cell\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns curren cell type. 
+
+\begin{DoxyReturn}{Returns}
+Cell\+Type Current cell type 
+\end{DoxyReturn}
+\Hypertarget{class_cell_a6d03951aa6d2e8215b0f57028bc37dde}\label{class_cell_a6d03951aa6d2e8215b0f57028bc37dde} 
+\index{Cell@{Cell}!GetCellValue@{GetCellValue}}
+\index{GetCellValue@{GetCellValue}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{GetCellValue()}{GetCellValue()}}
+{\footnotesize\ttfamily char Cell\+::\+Get\+Cell\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns current cell value. 
+
+\begin{DoxyReturn}{Returns}
+char Current cell value 
+\end{DoxyReturn}
+\Hypertarget{class_cell_a33d14678842f485619909dca4ddde5a9}\label{class_cell_a33d14678842f485619909dca4ddde5a9} 
+\index{Cell@{Cell}!SetCellState@{SetCellState}}
+\index{SetCellState@{SetCellState}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{SetCellState()}{SetCellState()}}
+{\footnotesize\ttfamily void Cell\+::\+Set\+Cell\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_cell_8h_ad5292c4e76abc657b113de5594268aa9}{Cell\+State}}}]{cell\+State }\end{DoxyParamCaption})}
+
+
+
+This sets a new cell state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+State} & New cell state to set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cell_a1038d2a119dbed6dcad89e0e5fd130a4}\label{class_cell_a1038d2a119dbed6dcad89e0e5fd130a4} 
+\index{Cell@{Cell}!SetCellType@{SetCellType}}
+\index{SetCellType@{SetCellType}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{SetCellType()}{SetCellType()}}
+{\footnotesize\ttfamily void Cell\+::\+Set\+Cell\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_cell_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}}}]{cell\+Type }\end{DoxyParamCaption})}
+
+
+
+This sets a new cell type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+Type} & New cell type to set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cell_aa9638bc742b208f501a2ab4b6f936e65}\label{class_cell_aa9638bc742b208f501a2ab4b6f936e65} 
+\index{Cell@{Cell}!SetCellValue@{SetCellValue}}
+\index{SetCellValue@{SetCellValue}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{SetCellValue()}{SetCellValue()}}
+{\footnotesize\ttfamily void Cell\+::\+Set\+Cell\+Value (\begin{DoxyParamCaption}\item[{char}]{cell\+Value }\end{DoxyParamCaption})}
+
+
+
+This sets cell value for the cell calculated from grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+Value} & New cell value \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Documents/\+Programs/\+Outscal/\+Minesweeper-\/\+Cpp/\+Header\+Files/\mbox{\hyperlink{_cell_8h}{Cell.\+h}}\item 
+D\+:/\+Documents/\+Programs/\+Outscal/\+Minesweeper-\/\+Cpp/\mbox{\hyperlink{_cell_8cpp}{Cell.\+cpp}}\end{DoxyCompactItemize}
