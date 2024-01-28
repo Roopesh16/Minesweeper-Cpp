@@ -178,7 +178,7 @@ void Grid::OpenEmptyGrid(int row, int col, bool visited[N][N])
     {
         for (int j = col - 1; j <= col + 1; j++)
         {
-            if (row >= 0 && row < N && col >= 0 && col < N)
+            if (i >= 0 && i < N && j >= 0 && j < N)
             {
                 if (visited[i][j] == false)
                 {
