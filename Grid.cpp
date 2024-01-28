@@ -17,16 +17,15 @@ void Grid::GetInput(int row, int col)
         isFirst = false;
     }
 
-    if (cells[row][col]->GetCellType() == EMPTY)
-        OpenEmptyGrid(row, col, visited);
-    else if (cells[row][col]->GetCellType() == NUMBER)
-        cells[row][col]->SetCellState(OPEN);
-    else
-    {
-        cells[row][col]->SetCellState(OPEN);
-        State::SetState(OVER);
-    }
-
+    // if (cells[row][col]->GetCellType() == EMPTY)
+    //     OpenEmptyGrid(row, col, visited);
+    // else if (cells[row][col]->GetCellType() == NUMBER)
+    //     cells[row][col]->SetCellState(OPEN);
+    // else
+    // {
+    //     cells[row][col]->SetCellState(OPEN);
+    //     State::SetState(OVER);
+    // }
     PrintGrid();
 }
 
@@ -56,8 +55,39 @@ void Grid::SetCellValues()
     {
         for (int j = 0; j < N; j++)
         {
-            cells[i][j]->SetCellValue();
         }
+    }
+}
+
+void Grid::SetCellValue(int row, int col)
+{
+    if (cells[row][col]->GetCellType() == MINE)
+    {
+        cells[row][col]->SetCellValue('*');
+        return;
+    }
+    int mineCount = 0;
+    for (int i = row - 1; i <= row + 1; i++)
+    {
+        for (int j = col - 1; j <= col + 1; j++)
+        {
+            if (i >= 0 && i < N && j >= 0 && j < N)
+            {
+                if (cells[row][col]->GetCellType() == MINE)
+                    mineCount++;
+            }
+        }
+    }
+
+    if (mineCount == 0)
+    {
+        cells[row][col]->SetCellType(EMPTY);
+        cells[row][col]->SetCellValue('0');
+    }
+    else
+    {
+        cells[row][col]->SetCellType(NUMBER);
+        cells[row][col]->SetCellValue('1');
     }
 }
 
@@ -105,7 +135,7 @@ void Grid::OpenEmptyGrid(int row, int col, bool visited[N][N])
     {
         for (int j = col - 1; j < col + 1; j++)
         {
-            if (visited[i][j] == false)
+            if ((i != row && j != col) && visited[i][j] == false)
             {
                 visited[i][j] = true;
                 OpenEmptyGrid(i, j, visited);
@@ -121,15 +151,10 @@ void Grid::PrintGrid()
         for (int j = 0; j < N; j++)
         {
             if (cells[i][j]->GetCellState() == OPEN)
-                cout << cells[i][j]->GetCellValue();
+                cout << cells[i][j]->GetCellValue() << " ";
             else
-                cout << "-";
+                cout << "- ";
         }
         cout << endl;
     }
-}
-
-Cell **Grid::GetGrid()
-{
-    return *cells;
 }
